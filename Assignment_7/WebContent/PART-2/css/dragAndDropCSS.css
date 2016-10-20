@@ -1,0 +1,17 @@
+#boxA, #boxB {
+				padding:10px;
+				margin:10px;
+				-moz-user-select:none;                       
+			 }
+#boxA { 
+	     background-color:cyan; 
+	     width:150px; 
+	     height:150px; }
+#boxB { 
+	     background-color: red; 
+	     width:150px; 
+	     height:150px; }
+	     
+#imageId {
+	     width:140px;
+	     height:150px;}

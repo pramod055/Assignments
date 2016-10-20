@@ -1,0 +1,33 @@
+package com.nagarro.flightsearchengine.service;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Set;
+
+import com.nagarro.flightsearchengine.domain.FlightDetails;
+/**
+ * @author pramodyadav
+ *class sort the resultant set
+ */
+public class SortFlights {
+
+	public List<FlightDetails> sortFlights(Set<FlightDetails> resultantSet,String inputArray[])
+	{
+		/**
+		 * this method first change the HashSet into List then apply Collections.sort()
+		 * @return ArrayList
+		 */
+		List<FlightDetails> resultantArraylist = new ArrayList<FlightDetails>(resultantSet);
+		
+		if(inputArray[4]=="2")
+		Collections.sort(resultantArraylist, new sortFlightBasedOnFareAndFlightDuration(
+				new SortFlightsBasedOnFare(),
+				new SortFlightsBasedOnDuration()));
+		else
+			Collections.sort(resultantArraylist, new SortFlightsBasedOnFare());	
+		return resultantArraylist;
+	}
+
+
+}
