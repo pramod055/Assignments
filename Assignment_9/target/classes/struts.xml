@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC 
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+ "http://struts.apache.org/dtds/struts-2.0.dtd">
+  <struts> 
+
+ <package name="default" extends="struts-default" >
+ <action name="verify" class="com.nagarro.manager.action.LoginAction">
+ <result name="success">/employeeDetails.jsp</result>
+ <result name="login">/Login.jsp</result> 
+ <result name="input">/Login.jsp</result> 
+ 
+ </action>
+ </package> 
+ 
+    <package name="upload" extends="struts-default">
+   <action name="upload" class="com.nagarro.manager.action.FileUploadAction">
+       <result name="success">/employeeDetails.jsp</result>
+       <result name="login" >/Login.jsp</result> 
+       <result name="error">/error.jsp</result>
+   </action>
+   </package>
+   
+    <package name="update" extends="struts-default">
+   <action name="update" class="com.nagarro.manager.action.UpdateAction">
+       <result name="success">/employeeDetails.jsp</result>
+       <result name="error">/error.jsp</result>
+       <result name="login" >/Login.jsp</result> 
+   </action>
+   </package>
+   
+   <package name="download" extends="struts-default">
+        <action name="download" class="com.nagarro.manager.action.DownloadAction">
+            <result name="success" type="stream">
+                <param name="contentType">text/csv</param>
+                <param name="inputName">fileInputStream</param>
+                <param name="contentDisposition">attachment;filename="employees.csv"</param>
+                <param name="bufferSize">1024</param>
+            </result>
+            <result name="login" >/Login.jsp</result> 
+        </action>
+   </package>
+  <package name="logout" extends="struts-default"> 
+ <action name="logout" class="com.nagarro.manager.action.LogoutAction" method="logout">  
+<result name="success" >/Login.jsp</result> 
+<result name="login" >/Login.jsp</result> 
+</action> 
+</package>  
+ </struts>

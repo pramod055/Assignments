@@ -1,0 +1,72 @@
+@CHARSET "ISO-8859-1";
+
+#overlay
+{
+	position:fixed;
+	height:100%;
+	width:100%;
+	opacity:0.25;
+	top:0%;
+	left:0%;
+	background-color:#ec97d2;
+	display:none;
+}
+#popup
+{
+	position: fixed;
+    top: 208px;
+    left: 1358px;
+    height: 311px;
+    width: 287px;
+    background-color: #e1e49b;
+    display: none;
+}
+
+#popFiledset
+{
+	
+}
+#tabuser
+{
+	border-collapse: collapse;
+	width : 100%;
+	text-align:center; 
+}
+
+th,td,#tabuser
+{
+	border: 1px solid black;
+cursor:pointer;
+}
+
+#fieldset
+{
+	width: 800px;
+        margin-top: 200px;
+        margin-left: 469px;
+}
+#imgAdd
+{
+ 	zoom: 10%;
+}
+
+input
+{
+	margin-top:25px;
+}
+#txtEmail
+{
+	margin-left:15px;
+}
+#txtName
+{
+	margin-left:15px;
+}
+#txtPhone
+{
+	margin-left:15px;
+}
+#txtWebsite
+{
+	margin-left:6px;
+}

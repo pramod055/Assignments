@@ -1,0 +1,54 @@
+body {
+    margin: 0%;
+    padding: 0%;
+}
+#dataTable{
+    width: 800px;
+}
+#add-user,#tblUsers{
+    float: left
+}
+#User-fieldset{
+    width: 60%;
+    margin: auto;
+    padding: 20px;
+    margin-top: 30px;
+}
+#add-user{
+    float: left;
+    height: 48px;
+    width: 48px;
+    margin: 20px
+}
+.hidden{
+	display: none;
+}
+#logoutImage{
+    height: 30px;
+    width: 30px;
+    margin-left: 25px;
+}
+#dataTable td{
+    text-align: center;
+    padding: 5px;
+    border: 1px solid black;
+}
+#overlay{
+	background-color: #8877BB;
+	opacity: 0.5;
+	position: fixed;
+    top: 0%;
+    left: 0%;
+	height: 100%;
+	width: 100%;
+	z-index: 1;
+}
+#popup {
+    background-color: bisque;
+    position: fixed;
+    min-height: 400px;
+	min-width: 600px;
+    top: calc(50% - 200px);
+    left: calc(50% - 300px);
+    z-index: 2;
+}

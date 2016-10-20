@@ -1,0 +1,23 @@
+#table1
+{
+	border-collapse: collapse;
+	width : 50%;
+	text-align:center; 
+}
+
+th,td,#table1
+{
+	border: 1px solid black;
+}
+
+.error {
+	color: #ff0000;
+}
+
+.errorblock {
+	color: #ffEEEE;
+	background-color: #ff0000;
+	border: 3px solid black;
+	padding: 8px;
+	margin: 16px;
+}

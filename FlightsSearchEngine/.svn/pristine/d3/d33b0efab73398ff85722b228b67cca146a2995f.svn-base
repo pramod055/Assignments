@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="This is ant project" default="run">
+
+
+	<target name="clean" description="Clean output directories">
+        <delete includeEmptyDirs="true">
+            <fileset dir="bin" includes="**/*"/>
+        </delete>
+	</target>
+
+	<path id="master-classpath">
+		<fileset dir="lib">
+			<include name="*.jar"/>
+		</fileset>
+		<pathelement path="bin"/>
+	</path>
+
+	<target name="build" description="To compile java files">
+		<mkdir dir="bin/class"/>
+        <mkdir dir="lib"/>
+		<javac destdir="bin/class" source="1.7" target="1.7" debug="true"
+			 deprecation="false" optimize="false" failonerror="true" includeantruntime="false">
+			<src path="src"/>
+			<classpath refid="master-classpath"/>
+		</javac>
+        <copy todir="bin/class">
+            <fileset dir="CSVFile">
+                <include name="**/*.csv"/>
+            </fileset>
+        	 <fileset dir="MessageBundle">
+        	                <include name="**/*.properties"/>
+        	                <include name="**/*.csv"/>
+        	 </fileset>
+        </copy>
+	</target>
+
+	<target name="build-javadoc" description="To generate javadoc">
+		<javadoc sourcepath="src" destdir="doc" version="true" windowtitle="Airlines Application" >
+			<doctitle><![CDATA[= Airlines Application =]]></doctitle>
+			<bottom>
+				<![CDATA[Copyright Â© 2016. All Rights Reserved.]]>
+			</bottom>
+		</javadoc>
+	</target>
+
+
+	<target name="build-jar" depends="build" description="To create jar file">
+        <mkdir dir="bin"/>
+		<jar destfile="MyJar.jar" basedir="bin/class">
+		<manifest>
+			<attribute name="Main-Class" value="com.nagarro.flightsearchengine.controller.Application"/>
+		</manifest>
+
+		</jar>
+	</target>
+
+	<target name="run" depends="build-jar" description="run project">
+		<java jar="MyJar.jar" fork="true"/>
+	</target>
+
+</project>

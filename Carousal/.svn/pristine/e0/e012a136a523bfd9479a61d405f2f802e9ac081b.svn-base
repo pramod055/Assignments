@@ -1,0 +1,50 @@
+fieldset
+{
+	background: #eccf37;
+}
+
+#topDiv
+{
+	width: 480px;
+    margin: auto;
+}
+#parentDiv{
+	height:200px ;
+	margin:auto ;
+	border:solid ;
+	width:555px;
+}
+
+
+#divRight,#divleft,#ulDiv{
+	float:left;
+	width:200px ;
+	height:200px ;
+}
+input[type=image]{
+	width:200px ;
+	height:200px ;
+}
+#ulDiv{
+	width: calc(100% - 400px);
+    height:200px;
+    overflow:hidden;
+}
+
+#ulItems{
+    list-style-type: none;
+    position:relative;
+    width: 9999px; 
+    height:200px ;
+    padding: 0px ;
+    margin:0px ;
+}
+
+#ulItems li{ 
+    float:left;
+    width: 150px;
+    height: 190px;
+    margin: 5px 5px 5px 0px ;
+    background-color:#0d8230;
+}
+

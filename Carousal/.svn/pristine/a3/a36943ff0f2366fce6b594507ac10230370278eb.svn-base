@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="css/Carousal.css" rel="stylesheet" />
+</head>
+<body>
+        <div id="topDiv">
+            <fieldset>
+                <legend>Carousel</legend>
+                <label> Enter the number of images you want see(2-10): </label>
+                <input type="number" placeholder="Enter Number" name="numberOfImages" max="10" min="2" id="numberOfImages" />
+                <input type="button" value="Show" id="btnShow" />
+            </fieldset>
+        </div> <br /> <br />
+
+        <div id="parentDiv">
+            <div id="divleft">
+                <input type="image" src="Image/Left.jpg" id="btnLeft">
+            </div>
+
+            <div id="ulDiv">
+                <ul id="ulItems">
+                    <li><div>1</div></li>
+                    <li><div>2</div></li>
+                    <li><div>3</div></li>
+                    <li><div>4</div></li>
+                    <li><div>5</div></li>
+                    <li><div>6</div></li>
+                    <li><div>7</div></li>
+                    <li><div>8</div></li>
+                    <li><div>9</div></li>
+                    <li><div>10</div></li>
+                    <li><div>11</div></li>
+                    <li><div>12</div></li>
+                    <li><div>13</div></li>
+                    <li><div>14</div></li>
+                    <li><div>15</div></li>
+                    <li><div>16</div></li>
+                    <li><div>17</div></li>
+                    <li><div>18</div></li>
+                    <li><div>19</div></li>
+                    <li><div>20</div></li>
+                    <li><div>21</div></li>
+                    <li><div>22</div></li>
+                    <li><div>23</div></li>
+                    <li><div>24</div></li>
+                    <li><div>25</div></li>
+                </ul>
+            </div>
+
+            <div id="divRight">
+                <input type="image" src="Image/Right.jpg" id="btnRight">
+            </div>
+        </div>
+        <script src="JS/jquery.js"></script>
+        <script src="JS/CarousalJs.js"></script>
+</body>
+</html>
